@@ -1,14 +1,30 @@
-<script>
-fetch("https://ipapi.co/json/")
-  .then(response => response.json())
-  .then(data => {
-    var country = data.country;
-    if (country == "US") {
-      window.location.href = "https://offer-usa.com";
-    } else if (country == "UK") {
-      window.location.href = "https://offer-uk.com";
-    } else {
-      window.location.href = "https://default-offer.com";
-    }
-  });
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geo Redirect</title>
+    <script>
+        fetch("https://ipapi.co/json/")
+        .then(response => response.json())
+        .then(data => {
+            var country = data.country_code;
+
+            if (country === "IT") { 
+                window.location.href = "https://conilladvertising.o18a.com/c?o=21554917&m=23984&a=642610"; 
+            } else if (country === "DE") { 
+                window.location.href = "https://conilladvertising.o18a.com/c?o=21554916&m=23984&a=642610"; 
+            } else if (country === "US") { 
+                window.location.href = "https://conilladvertising.o18a.com/c?o=21554915&m=23984&a=642610"; 
+            } else if (country === "AU") { 
+                window.location.href = "https://conilladvertising.o18a.com/c?o=21477426&m=23984&a=642610"; 
+            } else { 
+                window.location.href = "https://livesportsworld2025.blogspot.com/?m=1"; 
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Redirecting based on your location...</h1>
+</body>
+</html>
