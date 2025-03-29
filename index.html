@@ -1,0 +1,14 @@
+<script>
+fetch("https://ipapi.co/json/")
+  .then(response => response.json())
+  .then(data => {
+    var country = data.country;
+    if (country == "US") {
+      window.location.href = "https://offer-usa.com";
+    } else if (country == "UK") {
+      window.location.href = "https://offer-uk.com";
+    } else {
+      window.location.href = "https://default-offer.com";
+    }
+  });
+</script>
