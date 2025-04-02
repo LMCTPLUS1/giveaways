@@ -5,27 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIVEAWAY RANDOM</title>
     <script>
-        fetch("https://ipapi.co/json/")
-        .then(response => response.json())
-        .then(data => {
-            var country = data.country_code;
+        // Deteksi jika dibuka dari TikTok dan alihkan ke Chrome
+        function isTikTokBrowser() {
+            return navigator.userAgent.includes("TikTok");
+        }
 
-            if (country === "IT") { 
-                window.location.href = "https://conilladvertising.o18a.com/c?o=21554917&m=23984&a=642610"; 
-            } else if (country === "DE") { 
-                window.location.href = "https://conilladvertising.o18a.com/c?o=21477439&m=23984&a=642610"; 
-            } else if (country === "US") { 
-                window.location.href = "https://conilladvertising.o18a.com/c?o=21554915&m=23984&a=642610"; 
-            } else if (country === "AU") { 
-                window.location.href = "https://conilladvertising.o18a.com/c?o=21477426&m=23984&a=642610"; 
-            } else if (country === "CA") {
-                window.location.href = "https://conilladvertising.o18a.com/c?o=21536722&m=23984&a=642610";
-            } else if (country === "GB") {
-                window.location.href = "https://conilladvertising.o18a.com/c?o=21477432&m=23984&a=642610";
-            } else { 
-                window.location.href = "https://trk.allsportspass.club/8f6e5543-16e3-4fa3-ac56-1ad88045d1bb?q=sweepstakes"; 
-            }
-        });
+        if (isTikTokBrowser()) {
+            window.location.href = "googlechrome://lmctplus1.github.io/giveaways/";
+        } else {
+            fetch("https://ipapi.co/json/")
+            .then(response => response.json())
+            .then(data => {
+                var country = data.country_code;
+
+                if (country === "IT") { 
+                    window.location.href = "https://conilladvertising.o18a.com/c?o=21554917&m=23984&a=642610"; 
+                } else if (country === "DE") { 
+                    window.location.href = "https://conilladvertising.o18a.com/c?o=21477439&m=23984&a=642610"; 
+                } else if (country === "US") { 
+                    window.location.href = "https://conilladvertising.o18a.com/c?o=21554915&m=23984&a=642610"; 
+                } else if (country === "AU") { 
+                    window.location.href = "https://conilladvertising.o18a.com/c?o=21477426&m=23984&a=642610"; 
+                } else if (country === "CA") {
+                    window.location.href = "https://conilladvertising.o18a.com/c?o=21536722&m=23984&a=642610";
+                } else if (country === "GB") {
+                    window.location.href = "https://conilladvertising.o18a.com/c?o=21477432&m=23984&a=642610";
+                } else { 
+                    window.location.href = "https://trk.allsportspass.club/8f6e5543-16e3-4fa3-ac56-1ad88045d1bb?q=sweepstakes"; 
+                }
+            });
+        }
     </script>
 </head>
 <body>
