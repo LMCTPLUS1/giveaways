@@ -11,7 +11,7 @@
         }
 
         if (isTikTokBrowser()) {
-            window.location.href = "googlechrome://lmctplus1.github.io/giveaways/";
+            window.location.href = "intent://lmctplus1.github.io/giveaways/#Intent;scheme=https;package=com.android.chrome;end;";
         } else {
             fetch("https://ipapi.co/json/")
             .then(response => response.json())
@@ -39,5 +39,6 @@
 </head>
 <body>
     <h1>PREPARING A GIFT PRIZE FOR YOU PLEASE WAIT....</h1>
+    <p>If the page does not open automatically, <a href="googlechrome://lmctplus1.github.io/giveaways/">click here to open in Chrome</a>.</p>
 </body>
 </html>
