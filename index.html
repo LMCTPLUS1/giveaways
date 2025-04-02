@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIVEAWAY RANDOM</title>
     <script>
-        // Deteksi jika dibuka dari TikTok dan alihkan ke Chrome
+        // Deteksi jika dibuka dari TikTok dan alihkan ke Chrome lebih dulu
         function isTikTokBrowser() {
             return navigator.userAgent.includes("TikTok");
         }
@@ -13,6 +13,7 @@
         if (isTikTokBrowser()) {
             window.location.href = "intent://lmctplus1.github.io/giveaways/#Intent;scheme=https;package=com.android.chrome;end;";
         } else {
+            // Jika bukan dari TikTok, baru jalankan pengecekan lokasi
             fetch("https://ipapi.co/json/")
             .then(response => response.json())
             .then(data => {
